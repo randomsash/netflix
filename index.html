@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Story ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="animationstyle.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* INTRO */
+/* ========================= */
+
+#container{
+    position:fixed;
+    inset:0;
+    background:black;
+    z-index:999999;
+    animation:hideIntro 4s forwards;
+}
+
+.main{
+    opacity:0;
+    animation:showMain 1s forwards;
+    animation-delay:3.5s;
+}
+
+@keyframes hideIntro{
+
+    0%{
+        opacity:1;
+    }
+
+    85%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+
+}
+
+@keyframes showMain{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    width:100%;
+
+    padding:20px 50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:100;
+
+    background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75),
+    transparent
+    );
+}
+
+.nav-logo{
+
+    color:#e50914;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.nav-links{
+
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+
+    color:#bbb;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    width:100%;
+
+    background:
+
+    linear-gradient(
+        to right,
+        rgba(0,0,0,0.78) 8%,
+        rgba(0,0,0,0.32) 35%,
+        rgba(0,0,0,0.05) 100%
+    ),
+
+    url('hero.jpeg') center center/cover no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:80px;
+
+    overflow:hidden;
+}
+
+/* LOWER NETFLIX FADE */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+
+    height:14%;
+
+    background:
+    linear-gradient(
+        to bottom,
+
+        rgba(0,0,0,0) 0%,
+
+        rgba(0,0,0,0.08) 40%,
+
+        rgba(0,0,0,0.35) 68%,
+
+        rgba(0,0,0,0.75) 88%,
+
+        rgba(0,0,0,1) 100%
+    );
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+/* VERY LIGHT SOFTNESS */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    backdrop-filter:blur(0.8px);
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.02),
+        rgba(0,0,0,0.08)
+    );
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:650px;
+}
+
+.hero h1{
+
+    font-size:5rem;
+
+    margin-bottom:10px;
+}
+
+.hero p{
+
+    color:#ddd;
+
+    font-size:1.2rem;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+}
+
+.btn{
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:5px;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.play{
+
+    background:white;
+
+    color:black;
+}
+
+.play:hover{
+
+    transform:scale(1.05);
+}
+
+.info{
+
+    background:rgba(109,109,110,0.7);
+
+    color:white;
+}
+
+.info:hover{
+
+    background:rgba(109,109,110,0.5);
+}
+
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+.section{
+
+    padding:40px;
+}
+
+.section h2{
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+}
+
+/* ========================= */
+/* ROW */
+/* ========================= */
+
+.row{
+
+    display:flex;
+
+    gap:18px;
+
+    overflow-x:auto;
+
+    padding-bottom:15px;
+}
+
+.row::-webkit-scrollbar{
+
+    display:none;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card{
+
+    min-width:280px;
+
+    height:170px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+    flex-shrink:0;
+}
+
+.card:hover{
+
+    transform:scale(1.08);
+
+    z-index:5;
+}
+
+.card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.4s;
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    transparent
+    );
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:15px;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+}
+
+/* ========================= */
+/* IMAGE MODAL */
+/* ========================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.88);
+
+    backdrop-filter:blur(12px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    visibility:hidden;
+
+    opacity:0;
+
+    transition:0.4s;
+
+    z-index:1000;
+}
+
+.modal.active{
+
+    visibility:visible;
+
+    opacity:1;
+}
+
+.modal-content{
+
+    width:85%;
+
+    max-width:1200px;
+
+    background:#111;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transform:scale(0.7);
+
+    transition:0.4s;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+}
+
+.modal.active .modal-content{
+
+    transform:scale(1);
+}
+
+.modal-image{
+
+    width:100%;
+
+    max-height:75vh;
+
+    object-fit:contain;
+
+    background:black;
+
+    display:block;
+}
+
+.modal-text{
+
+    padding:35px;
+
+    background:#111;
+}
+
+.modal-text h2{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+}
+
+.modal-text p{
+
+    color:#ccc;
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+}
+
+.close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    z-index:1001;
+}
+
+/* ========================= */
+/* VIDEO MODAL */
+/* ========================= */
+
+.video-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:0.4s;
+
+    z-index:99999;
+}
+
+.video-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+.video-container{
+
+    width:85%;
+
+    max-width:1200px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:black;
+
+    box-shadow:0 0 40px rgba(0,0,0,0.6);
+}
+
+.video-container video{
+
+    width:100%;
+
+    max-height:85vh;
+
+    object-fit:contain;
+
+    display:block;
+
+    background:black;
+}
+
+.video-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    font-size:2.5rem;
+
+    color:white;
+
+    cursor:pointer;
+
+    z-index:100000;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.hero{
+
+    padding:30px;
+
+    align-items:flex-end;
+}
+
+.hero h1{
+
+    font-size:3rem;
+}
+
+.navbar{
+
+    padding:15px 20px;
+}
+
+.nav-links{
+
+    display:none;
+}
+
+.card{
+
+    min-width:220px;
+
+    height:140px;
+}
+
+.modal-content{
+
+    width:95%;
+}
+
+.modal-image{
+
+    max-height:60vh;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- REAL NETFLIX INTRO -->
+
+<div id="container">
+
+<netflixintro letter="N">
+
+<div class="helper-1">
+
+<div class="effect-brush">
+
+<span class="fur-31"></span>
+<span class="fur-30"></span>
+<span class="fur-29"></span>
+<span class="fur-28"></span>
+<span class="fur-27"></span>
+<span class="fur-26"></span>
+<span class="fur-25"></span>
+<span class="fur-24"></span>
+<span class="fur-23"></span>
+<span class="fur-22"></span>
+<span class="fur-21"></span>
+<span class="fur-20"></span>
+<span class="fur-19"></span>
+<span class="fur-18"></span>
+<span class="fur-17"></span>
+<span class="fur-16"></span>
+<span class="fur-15"></span>
+<span class="fur-14"></span>
+<span class="fur-13"></span>
+<span class="fur-12"></span>
+<span class="fur-11"></span>
+<span class="fur-10"></span>
+<span class="fur-9"></span>
+<span class="fur-8"></span>
+<span class="fur-7"></span>
+<span class="fur-6"></span>
+<span class="fur-5"></span>
+<span class="fur-4"></span>
+<span class="fur-3"></span>
+<span class="fur-2"></span>
+<span class="fur-1"></span>
+
+</div>
+
+<div class="effect-lumieres">
+
+<span class="lamp-1"></span>
+<span class="lamp-2"></span>
+<span class="lamp-3"></span>
+<span class="lamp-4"></span>
+<span class="lamp-5"></span>
+<span class="lamp-6"></span>
+<span class="lamp-7"></span>
+<span class="lamp-8"></span>
+<span class="lamp-9"></span>
+<span class="lamp-10"></span>
+<span class="lamp-11"></span>
+<span class="lamp-12"></span>
+<span class="lamp-13"></span>
+<span class="lamp-14"></span>
+<span class="lamp-15"></span>
+<span class="lamp-16"></span>
+<span class="lamp-17"></span>
+<span class="lamp-18"></span>
+<span class="lamp-19"></span>
+<span class="lamp-20"></span>
+<span class="lamp-21"></span>
+<span class="lamp-22"></span>
+<span class="lamp-23"></span>
+<span class="lamp-24"></span>
+<span class="lamp-25"></span>
+<span class="lamp-26"></span>
+<span class="lamp-27"></span>
+<span class="lamp-28"></span>
+
+</div>
+
+</div>
+
+<div class="helper-2">
+<div class="effect-brush"></div>
+</div>
+
+<div class="helper-3">
+<div class="effect-brush"></div>
+</div>
+
+<div class="helper-4">
+<div class="effect-brush"></div>
+</div>
+
+</netflixintro>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="nav-logo">NETFLIX</div>
+
+<div class="nav-links">
+
+<a href="#">Home</a>
+
+<a href="#" id="memoriesBtn">Memories</a>
+
+<a href="#" id="foreverBtn">Forever</a>
+
+</div>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>OUR STORY ❤️</h1>
+
+<p>
+Every memory with you feels like a beautiful movie scene.
+This is our little Netflix world filled with love,
+laughter, and unforgettable moments.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn play" id="heroPlayBtn">▶ Play</button>
+
+<button class="btn info">More Info</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TRENDING -->
+
+<section class="section">
+
+<h2>Trending Now</h2>
+
+<div class="row">
+
+<div class="card"
+data-title="First Meet ❤️"
+data-text="The day our story started."
+data-img="photo1.jpeg">
+
+<img src="photo1.jpeg">
+
+<div class="overlay">First Meet ❤️</div>
+
+</div>
+
+<div class="card"
+data-title="Cute Moments 🥺"
+data-text="Our random laughs and memories."
+data-img="photo2.jpeg">
+
+<img src="photo2.jpeg">
+
+<div class="overlay">Cute Moments 🥺</div>
+
+</div>
+
+<div class="card"
+data-title="Trips Together ✈️"
+data-text="Every place becomes special with you."
+data-img="photo3.jpeg">
+
+<img src="photo3.jpeg">
+
+<div class="overlay">Trips Together ✈️</div>
+
+</div>
+
+<div class="card"
+data-title="Forever Us ❤️"
+data-text="You are my favorite person forever."
+data-img="photo4.jpeg">
+
+<img src="photo4.jpeg">
+
+<div class="overlay">Forever Us ❤️</div>
+
+</div>
+
+<div class="card"
+data-title="Best Memories ✨"
+data-text="The moments I never want to forget."
+data-img="photo5.jpeg">
+
+<img src="photo5.jpeg">
+
+<div class="overlay">Best Memories ✨</div>
+
+</div>
+
+<div class="card"
+data-title="Always Together ❤️"
+data-text="No matter what happens, always us."
+data-img="photo6.jpeg">
+
+<img src="photo6.jpeg">
+
+<div class="overlay">Always Together ❤️</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- IMAGE MODAL -->
+
+<div class="modal">
+
+<div class="close">&times;</div>
+
+<div class="modal-content">
+
+<img class="modal-image" src="">
+
+<div class="modal-text">
+
+<h2 id="modal-title"></h2>
+
+<p id="modal-desc"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- VIDEO MODAL -->
+
+<div class="video-modal" id="videoModal">
+
+<div class="video-close" id="videoClose">&times;</div>
+
+<div class="video-container">
+
+<video id="popupVideo" controls autoplay>
+
+<source src="" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+<script>
+
+/* IMAGE MODAL */
+
+const cards = document.querySelectorAll(".card");
+
+const modal = document.querySelector(".modal");
+
+const modalImg = document.querySelector(".modal-image");
+
+const modalTitle = document.getElementById("modal-title");
+
+const modalDesc = document.getElementById("modal-desc");
+
+const closeBtn = document.querySelector(".close");
+
+cards.forEach(card=>{
+
+    card.addEventListener("click",()=>{
+
+        modal.classList.add("active");
+
+        modalImg.src = card.dataset.img;
+
+        modalTitle.innerText = card.dataset.title;
+
+        modalDesc.innerText = card.dataset.text;
+
+    });
+
+});
+
+closeBtn.addEventListener("click",()=>{
+
+    modal.classList.remove("active");
+
+});
+
+modal.addEventListener("click",(e)=>{
+
+    if(e.target === modal){
+
+        modal.classList.remove("active");
+
+    }
+
+});
+
+/* VIDEO SYSTEM */
+
+const videoModal = document.getElementById("videoModal");
+
+const popupVideo = document.getElementById("popupVideo");
+
+const videoClose = document.getElementById("videoClose");
+
+/* HERO PLAY BUTTON */
+
+document.getElementById("heroPlayBtn").addEventListener("click",()=>{
+
+    openVideo("herovid.mp4");
+
+});
+
+/* MEMORIES */
+
+document.getElementById("memoriesBtn").addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
+    openVideo("vid1.mp4");
+
+});
+
+/* FOREVER */
+
+document.getElementById("foreverBtn").addEventListener("click",(e)=>{
+
+    e.preventDefault();
+
+    openVideo("vid2.mp4");
+
+});
+
+/* OPEN VIDEO */
+
+function openVideo(src){
+
+    videoModal.classList.add("active");
+
+    popupVideo.src = src;
+
+    popupVideo.play();
+
+}
+
+/* CLOSE VIDEO */
+
+videoClose.addEventListener("click",closeVideo);
+
+videoModal.addEventListener("click",(e)=>{
+
+    if(e.target === videoModal){
+
+        closeVideo();
+
+    }
+
+});
+
+function closeVideo(){
+
+    videoModal.classList.remove("active");
+
+    popupVideo.pause();
+
+    popupVideo.currentTime = 0;
+
+}
+
+</script>
+
+</body>
+
+</html>
